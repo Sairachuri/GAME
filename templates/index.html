@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genrate Attribute Metadata Editor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Genrate Attribute Metadata Editor </h1>
+
+    <ul>
+        {% for attribute, values in attributes.items() %}
+            <li><a href="{{ url_for('edit_attribute', attribute=attribute) }}">{{ attribute }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
